@@ -1,0 +1,8 @@
+<div class="banner mb-4">
+    <h2 class="h2">{{category?.name}}</h2>
+</div>
+<div class="productsList mb-5">
+    <div class="row">
+        <app-products-list [actualLengthList]="productsList.length" [productsList]="productsList" (loadMore)="loadMoreProducts()"></app-products-list>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="card shadow-sm" >
+    <div class="m-3">
+      <img [src]="product.images[0]" class="card-img-top" alt="{{product.title}}">
+    </div>
+    <div class="card-body">
+      <div style="height: 50px">
+        <a class="text-dark" [routerLink]="['/product', product.id]"><h6 class="card-title">{{product.title | uppercase}}</h6></a>
+      </div>
+      <div class="d-flex justify-content-between">
+        <a [routerLink]="['/product', product.id]" class="btn btn-sm btn-primary">Ver mas</a>
+        <div>
+          <span class="me-2" style="font-weight: bold">{{product.price | currency}}</span>
+          <a class="btn btn-sm btn-success" role="button" (click)="addProductShopCart(product)"><i class="bi bi-cart-plus"></i></a>
+        </div>
+      </div>
+    </div>
+</div>

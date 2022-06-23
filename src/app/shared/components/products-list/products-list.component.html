@@ -1,0 +1,8 @@
+<div class="productsList">
+    <div class="row">
+        <app-product-card class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" [product]="product" *ngFor="let product of productsList"></app-product-card>
+        <div class="d-grid gap-2">
+            <button *ngIf="showMore == true" class="btn btn-primary" type="button" (click)="loadMoreProducts()">Cargar mas</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row justify-content-center" style="height: 100vh;">
+        <section class="col-12 col-md-6 col-lg-4 align-self-center shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="content">
+                <div class="header text-center mt-4 mb-4">
+                    <h1>Platzi-Store</h1>
+                    <img src="./assets/images/logos/platzi.png" alt="logo_platzi" class="rounded-circle" width="50px">
+                </div>
+                <div class="login mb-4 p-3">
+                    <form [formGroup]="form" (submit)="createrUser()">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre usuario</label>
+                            <input type="text" class="form-control" id="name" formControlName="name" autocomplete="off" placeholder="Ingrese nombre de usuario">
+                          </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" formControlName="email" autocomplete="off" placeholder="exampl@example.com">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="password" formControlName="password" placeholder="Ingresar su contraseña">
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Crear usuario</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="create text-center">
+                    <p class="text-muted">Ya tienes usuario? Ingresa <a [routerLink]="['/auth/login']">aquí</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
